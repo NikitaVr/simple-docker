@@ -6,4 +6,4 @@
 
 `heroku container:release web --app <app-site-name>`
 
-`heroku open`
+`heroku open --app <app-site-name>`
