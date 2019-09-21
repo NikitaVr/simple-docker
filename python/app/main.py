@@ -1,11 +1,15 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import os
+import pymongo
 
 app = Flask(__name__)
 CORS(app)
 
 animals = ["cat", "dog"]
+
+client = pymongo.MongoClient("mongodb+srv://<USER>:<PASSWORD>@cluster0-mvqxw.mongodb.net/test?retryWrites=true&w=majority")
+db = client.Zoo
 
 
 @app.route('/')
